@@ -59,8 +59,8 @@ done
 if [ $has_mc == 1 ] ; then
 
   if [ $(rtc_has_bad_time) == 1 ]; then
-    log 'RTC has bad time, write system time into RTC'
-    system_to_rtc
+    log 'RTC has bad time!!!!!'
+    #system_to_rtc
   else
     log 'Seems RTC has good time, write RTC time into system'
     rtc_to_system
