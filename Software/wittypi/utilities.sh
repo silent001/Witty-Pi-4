@@ -123,7 +123,7 @@ one_wire_confliction()
 
 has_internet()
 {
-  resp=$(curl -s --head $INTERNET_SERVER)
+  resp=$(curl -s -m 5 --head $INTERNET_SERVER)
   if [[ ${#resp} -ne 0 ]] ; then
     return 0
   else
