@@ -113,6 +113,7 @@ if [ $ERR -eq 0 ]; then
     cd wittypi
     chmod +x wittyPi.sh
     chmod +x daemon.sh
+    chmod +x syncTime.sh
     chmod +x runScript.sh
     chmod +x beforeScript.sh
     chmod +x afterStartup.sh
