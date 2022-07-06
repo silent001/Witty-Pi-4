@@ -108,8 +108,10 @@ if [ $ERR -eq 0 ]; then
   if [ -d "wittypi" ]; then
     echo 'Seems wittypi is installed already, skip this step.'
   else
-    wget https://www.uugear.com/repo/WittyPi4/LATEST -O wittyPi.zip || ((ERR++))
-    unzip wittyPi.zip -d wittypi || ((ERR++))
+    wget https://github.com/silent001/Witty-Pi-4/archive/master.zip -O "${HOME}/Downloads/wittyPi.zip"
+    unzip "${HOME}/Downloads/wittyPi.zip" -d "${HOME}/Downloads/" \
+    && cp -rf "${HOME}/Downloads/Witty-Pi-4-main/Software/wittypi" "${HOME}/Downloads/Witty-Pi-4-main/Software/install.sh" "${HOME}" \
+    && rm -r "${HOME}/Downloads/Witty-Pi-4-main" "${HOME}/Downloads/wittyPi.zip"
     cd wittypi
     chmod +x wittyPi.sh
     chmod +x daemon.sh
